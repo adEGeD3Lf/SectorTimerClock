@@ -2,6 +2,7 @@
 
 **SectorTimerClock** は、デスクトップに常駐するアナログ時計アプリです。タイマー機能を備えており、残り時間を扇形（セクター）でビジュアルに表示します。
 
+<img width="143" height="142" alt="Image6" src="https://github.com/user-attachments/assets/ef0bef4b-525b-4456-8cc9-442aa5b22371" />
 <img width="167" height="157" alt="Image2" src="https://github.com/user-attachments/assets/9d4f384d-f893-445f-8a8c-742f0f74b74e" /><img width="142" height="147" alt="Image3" src="https://github.com/user-attachments/assets/e84cc900-b3ef-4a0f-a1b9-1cc429ef050f" /><img width="137" height="144" alt="Image4" src="https://github.com/user-attachments/assets/1e800783-d1b3-4b49-839a-83624c65d87f" />
 
 
