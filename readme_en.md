@@ -1,35 +1,94 @@
+# SectorTimerClock V1.2
 
-# PomoSectorChrono
+**SectorTimerClock** is a desktop analog clock that lives on your screen. It features a built-in timer that visually displays the remaining time as a colored sector (pie slice) on the clock face.
 
-A simple desktop timer app that combines an analog clock with a countdown timer.  
-Remaining time is visualized intuitively as a sector (wedge) overlaid on the clock face.
-
----
-
-## Features
-
-- Remaining time displayed as a **wedge sector** overlaid on the analog clock
-- Two timer modes: **countdown duration** and **target time**
-- Display scale **switches automatically** based on remaining time (hours / minutes / seconds mode)
-- **Flashing animation** when the timer finishes
-- Register frequently used timers as **favorites** for one-click start
-- Highly customizable appearance — clock face, hands, colors, size, and more
-- Frameless window with always-on-top support for a **clean desktop presence**
+🔗 [Latest Release](https://github.com/adEGeD3Lf/SectorTimerClock/releases)
 
 ---
 
-## How to Use
+## Table of Contents
 
-You'll figure most of it out just by playing around. But just in case…
+- [System Requirements](#system-requirements)
+- [Installation & Launch](#installation--launch)
+- [Basic Controls](#basic-controls)
+- [Timer](#timer)
+- [Right-Click Menu](#right-click-menu)
+- [Settings](#settings)
+- [Settings File](#settings-file)
+
+---
+
+## System Requirements
+
+- Windows 11
+
+---
+
+## Installation & Launch
+
+1. Extract the ZIP file to any folder
+2. Double-click `SectorTimerClock.exe` to launch
+
+To uninstall, simply delete the folder. No registry entries are created.
+
+---
 
 ## Basic Controls
 
-| Action | Behavior |
-|--------|----------|
-| Left drag | Move the clock |
-| Left double-click | Reset timer |
-| Left click after timer ends | Reset timer |
-| Right-click | Open context menu |
+| Action | Result |
+|--------|--------|
+| Left drag | Move the clock anywhere on screen |
+| Left double-click | Reset the timer |
+| Left click (when flashing) | Stop flashing and reset |
+| Right-click | Open the menu |
+
+The window position is saved automatically and restored on next launch (can be disabled in Settings).
+
+---
+
+## Timer
+
+Open the timer from the right-click menu → **Timer Settings**.
+
+### Set by Duration
+
+Specify how much time is left until the end.
+
+Examples:
+- `1:30:00` → 1 hour 30 minutes from now
+- `45:00` → 45 minutes from now
+- `10` → 10 minutes from now
+
+### Set by Time
+
+Set a specific end time. If the specified time has already passed today, it will be set for the same time tomorrow.
+
+Example: `17:30:00` → counts down to 5:30 PM
+
+### Display Modes
+
+The sector scale switches automatically based on how much time remains.
+
+| Mode | Condition | Full circle = |
+|------|-----------|---------------|
+| **H Mode** | More than 1 hour left | 12 hours |
+| **M Mode** | 1–60 minutes left | 60 minutes |
+| **S Mode** | 60 seconds or less | 60 seconds |
+
+The sector spans from the current clock position to the end time, shrinking as time passes. A ring around the dial is also shown while the timer is active.
+
+### When the Timer Ends
+
+The entire clock face flashes in the configured color. Left-click or double-click to reset.
+
+### History & Favorites
+
+Frequently used durations and times can be saved with the **Save** button (up to 20 entries, auto-sorted). Items added to **Favorites** appear in the right-click menu for one-click launch. Favorites can be reordered and deleted.
+
+**Default favorites:**
+- 5 minutes remaining
+- 25 minutes remaining
+- Time: 12:00:00
 
 ---
 
@@ -37,101 +96,85 @@ You'll figure most of it out just by playing around. But just in case…
 
 | Item | Description |
 |------|-------------|
-| Reset Timer | Stop and reset the running timer |
+| Reset Timer | Immediately reset the active timer |
 | Timer Settings | Open the timer settings dialog |
-| 　Remaining XX:XX:XX / Time XX:XX:XX | Start a saved favorite timer instantly |
-| Flip Date Position | Toggle the date display between top and bottom |
-| Advanced Settings | Open the appearance/advanced settings dialog |
-| Quit | Exit the app |
+| (Favorites list) | Launch a saved favorite with one click |
+| Toggle Date Position | Flip the date display between top and bottom |
+| Language | Switch between 日本語 and English |
+| Settings | Open the detailed settings dialog |
+| Quit | Exit the application |
 
-Favorites are listed in the order set in Timer Settings. They won't appear if none are registered.
-
----
-
-## Timer Settings
-
-Open via right-click → **Timer Settings**.
-
-### Set by Duration
-
-Specify a countdown duration. The input format is flexible:
-
-| Input | Meaning |
-|-------|---------|
-| `25` | 25 minutes |
-| `45:00` | 45 minutes |
-| `1:30:00` | 1 hour 30 minutes |
-
-- **Save** button: saves the current value to history
-- **Delete** button: removes the selected history entry
-- **Add to Favorites** button: registers the current value as a favorite (e.g. `Remaining 01:30:00`)
-- **Start** button: starts the timer
-
-### Set by Target Time
-
-Specify the time you want the timer to end (e.g. `17:30:00`).  
-If the specified time has already passed today, it will be treated as the same time tomorrow.
-
-- **Add to Favorites** button: saves the entry with a name like `Time 17:30:00`
-
-### Favorites Management
-
-A list is shown at the bottom of the Timer Settings dialog.
-
-- **↑ Up / ↓ Down** buttons: reorder how favorites appear in the right-click menu
-- **Delete** button: remove the selected favorite
+> **Note:** Language changes are saved immediately, but the UI will reflect the new language the next time a dialog is opened.
 
 ---
 
-## Timer Display Modes
+## Settings
 
-The wedge scale switches automatically based on remaining time:
-
-| Remaining Time | Mode | Scale |
-|----------------|------|-------|
-| Over 1 hour | H Mode | 12-hour scale |
-| 1–60 minutes | M Mode | 60-minute scale |
-| 60 seconds or less | S Mode | 60-second scale |
-
-When the timer ends, the clock face flashes in the configured color.  
-Click or double-click to reset.
-
----
-
-## Advanced Settings
-
-Open via right-click → **Advanced Settings**.
+Open via right-click → **Settings**. The dialog opens automatically in a position that does not overlap the clock.
 
 ### General
 
-- **Always on Top**: keeps the clock in front of all other windows
-- **Smooth Second Hand**: enables smooth second hand motion (slightly increases CPU usage)
-- **Opacity**: adjusts the overall transparency of the clock
-- **Diameter**: changes the size of the clock
+| Option | Description |
+|--------|-------------|
+| Always on Top | Keep the clock above all other windows |
+| Smooth Second Hand | Move the second hand smoothly instead of ticking |
+| Remember Window Position | Restore the clock position on next launch |
+| Opacity | Overall transparency of the clock (10–100%) |
+| Diameter | Clock size in pixels (50–600px) |
 
-### Clock Face
+### Dial Settings
 
-- Customize the color and font of the hour numbers
-- Adjust the radial position of the numbers
-- Set the color, thickness, and length of 5-minute and 1-minute tick marks
-- Configure the date display: color, font, format, opacity, and vertical position
+**Numbers:** Customize color, font, and distance from the center.
 
-### Hands
+**Tick Marks:** Set color, width, and length separately for 5-minute and 1-minute marks.
 
-Set the color, length, and thickness of the hour, minute, and second hands individually.
+**Date Display:**
+
+| Option | Description |
+|--------|-------------|
+| Show | Toggle date display on/off |
+| Opacity | Transparency of the date text |
+| Distance (up/down) | Vertical offset from center (negative = up, positive = down) |
+| Format | Choose from 4 formats below |
+
+Date format options (Japanese mode):
+
+| # | Example |
+|---|---------|
+| 0 | 4/20 |
+| 1 | 4/20(月) |
+| 2 | 4月20日月曜日 |
+| 3 | 2026/4/20 |
+
+Date format options (English mode):
+
+| # | Example |
+|---|---------|
+| 0 | 4/20 |
+| 1 | Mon 4/20 |
+| 2 | Mon, Apr 20 |
+| 3 | 4/20/2026 |
+
+### Hand Settings
+
+Customize color, length, and width for the hour, minute, and second hands. The hour hand is automatically prevented from being longer than the minute hand.
 
 ### Timer Display
 
-- Set the wedge color and radius for H / M / S modes
-- Customize the ring color and thickness
-- Configure the flash color and interval shown when the timer ends
+**H Mode / M Mode / S Mode:** Set the color and radius (as a percentage of the dial) for each mode's sector.
+
+**Ring:** Set the color and width of the ring shown around the dial while the timer is active.
+
+**Finish Flash:** Set the flash color and flash interval (in seconds).
 
 ---
 
-## Data Storage
+## Settings File
 
-All settings, history, and favorites are automatically saved to `settings.json`  
-in the same directory as the executable.
+All settings are saved automatically to `settings.json` in the same folder as `SectorTimerClock.exe`. The file can be edited manually, but using the Settings dialog is recommended.
+
+To reset all settings to defaults, delete `settings.json` and relaunch the app.
 
 ---
 
+*SectorTimerClock V1.2 — https://github.com/adEGeD3Lf/SectorTimerClock/releases*
