@@ -1,10 +1,8 @@
-# SectorTimerClock V1.2
-
-**SectorTimerClock** is a desktop analog clock that lives on your screen. It features a built-in timer that visually displays the remaining time as a colored sector (pie slice) on the clock face.
-
 <img width="143" height="142" alt="Image6" src="https://github.com/user-attachments/assets/ad205872-c1a2-407d-b6e4-9e290c457c39" /><img width="167" height="157" alt="Image2" src="https://github.com/user-attachments/assets/17800824-1f6f-4440-a681-b73ace2a86e2" /><img width="142" height="147" alt="Image3" src="https://github.com/user-attachments/assets/4d45158e-5698-462f-a815-f68602196bbd" /><img width="137" height="144" alt="Image4" src="https://github.com/user-attachments/assets/41cd841e-a4d6-4bf8-a3ba-7d59dcaaf8e1" />
 
+# SectorTimerClock V1.21
 
+**SectorTimerClock** is a desktop analog clock that stays on your screen at all times. It features a built-in timer that displays the remaining time visually as a sector (pie slice) on the clock face.
 
 🔗 [Latest Release](https://github.com/adEGeD3Lf/SectorTimerClock/releases)
 
@@ -87,7 +85,7 @@ The entire clock face flashes in the configured color. Left-click or double-clic
 
 ### History & Favorites
 
-Frequently used durations and times can be saved with the **Save** button (up to 20 entries, auto-sorted). Items added to **Favorites** appear in the right-click menu for one-click launch. Favorites can be reordered and deleted.
+Frequently used durations and times can be saved with the **Save** button (up to 20 entries, auto-sorted). Items added to **Favorites** appear in the right-click menu for one-click launch. Favorites can be reordered by drag & drop and deleted.
 
 **Default favorites:**
 - 5 minutes remaining
@@ -181,4 +179,4 @@ To reset all settings to defaults, delete `settings.json` and relaunch the app.
 
 ---
 
-*SectorTimerClock V1.2 — https://github.com/adEGeD3Lf/SectorTimerClock/releases*
+*SectorTimerClock V1.21 — https://github.com/adEGeD3Lf/SectorTimerClock/releases*
