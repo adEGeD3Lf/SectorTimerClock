@@ -2,7 +2,7 @@
 
 # SectorTimerClock User Manual
 
-**Version: 1.22**
+**Version: 1.23**
 
 ---
 
@@ -97,11 +97,12 @@ Runs multiple timers consecutively.
 | Add to Favorites | Registers the saved sequence as a favorite |
 
 - Steps can also be reordered by drag and drop
+- While a step is selected in the step list, pressing the **Delete key** (or Backspace key) deletes the selected step
 
 #### Saving
 
 - Enter a sequence name and click **Save** to save the sequence
-- The **Save** button is grayed out if the name already exists (overwriting is not allowed)
+- If a sequence with the same name already exists, a confirmation dialog will appear asking whether to overwrite it. Select "Overwrite" to update the existing sequence, or "Cancel" to abort
 - The **Add to Favorites** button becomes active only when the current steps exactly match a saved sequence
 
 #### Running a Sequence
@@ -215,5 +216,5 @@ Simply delete the folder you extracted the files to. No registry entries or file
 
 ---
 
-*SectorTimerClock V1.22*
+*SectorTimerClock V1.23*
 *https://github.com/adEGeD3Lf/SectorTimerClock/releases*
