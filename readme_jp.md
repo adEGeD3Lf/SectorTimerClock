@@ -4,7 +4,7 @@
 
 # SectorTimerClock 取扱説明書
 
-**バージョン：1.25**
+**バージョン：1.26**
 
 ---
 
@@ -254,5 +254,5 @@ SectorTimerClock は、デスクトップ上に常駐するアナログ時計ア
 
 ---
 
-*SectorTimerClock V1.25*
+*SectorTimerClock V1.26*
 *https://github.com/adEGeD3Lf/SectorTimerClock/releases*

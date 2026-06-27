@@ -1361,7 +1361,7 @@ class SettingsDialog(QDialog):
         layout.addSpacing(10)
         ver_frame = QFrame(); ver_frame.setFrameShape(QFrame.HLine); ver_frame.setFrameShadow(QFrame.Sunken)
         layout.addWidget(ver_frame)
-        lbl_ver = QLabel("SectorTimerClock v1.25")
+        lbl_ver = QLabel("SectorTimerClock v1.26")
         lbl_ver.setAlignment(Qt.AlignCenter)
         lbl_ver.setStyleSheet("color: #888; font-size: 11px;")
         layout.addWidget(lbl_ver)

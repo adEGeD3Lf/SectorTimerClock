@@ -2,7 +2,7 @@
 
 # SectorTimerClock User Manual
 
-**Version: 1.25**
+**Version: 1.26**
 
 ---
 
@@ -236,5 +236,5 @@ Simply delete the folder you extracted the files to. No registry entries or file
 
 ---
 
-*SectorTimerClock V1.25*
+*SectorTimerClock V1.26*
 *https://github.com/adEGeD3Lf/SectorTimerClock/releases*
