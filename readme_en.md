@@ -2,7 +2,7 @@
 
 # SectorTimerClock User Manual
 
-**Version: 1.23**
+**Version: 1.25**
 
 ---
 
@@ -53,7 +53,6 @@ Starts a timer for a specified remaining time.
 - **Save**: Saves the current value to history
 - **Delete**: Removes the selected history entry
 - **Add to Favorites**: Registers the current value as a favorite
-- **Add to Sequence**: Adds the current value as a step in the sequence
 - **Start**: Starts the timer
 
 ### Set by Time
@@ -85,7 +84,9 @@ Runs multiple timers consecutively.
 #### Editing a Sequence
 
 - Enter a sequence name
-- Enter a value in the "Set by Duration" or "Set by Time" input field, then click **Add to Sequence** to add a step
+- Use the step input row (type selector "Dur / Time" + a time text box + **Add Step** button) to append a new step to the end of the list
+  - Choose "Dur" (duration) or "Time" in the type selector
+  - The text box defaults to `00:00:00`. Enter a value in `HH:MM:SS` format (pressing Enter also adds the step)
 - Select a step in the list and use the following buttons to manage it:
 
 | Button | Description |
@@ -98,6 +99,25 @@ Runs multiple timers consecutively.
 
 - Steps can also be reordered by drag and drop
 - While a step is selected in the step list, pressing the **Delete key** (or Backspace key) deletes the selected step
+- Double-click a step to edit it directly. Use the format `[type] HH:MM:SS` (e.g. `[Dur] 00:25:00`). If the format is invalid, the row's background turns red and the change is not applied until it is corrected
+
+#### Pasting Schedule Text
+
+When the step list is empty, pasting text (Ctrl+V) lets you auto-generate time-based steps from a schedule-style text block.
+
+- Each line is scanned for a `start-end` pattern (e.g. `900-910`); only the end time is used as a step (the start time is ignored)
+- Any non-time text (notes, etc.) is ignored
+- 3–4 digit numbers like `910` are read as "hour:minute" (`910` → `9:10`, `1030` → `10:30`). 1–2 digit numbers are treated as the hour with `00` minutes (`12` → `12:00`)
+- If a parsed time is earlier than the previous one, it is automatically treated as PM (+12 hours)
+
+Example:
+```
+900-910  Check email
+910-1030 Working
+1040-12  Meeting
+100-110  Check email
+```
+Pasting the above generates four time steps: `09:10`, `10:30`, `12:00`, and `13:10`.
 
 #### Saving
 
@@ -216,5 +236,5 @@ Simply delete the folder you extracted the files to. No registry entries or file
 
 ---
 
-*SectorTimerClock V1.23*
+*SectorTimerClock V1.25*
 *https://github.com/adEGeD3Lf/SectorTimerClock/releases*
